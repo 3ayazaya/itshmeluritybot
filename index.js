@@ -18,13 +18,16 @@ bot.onText(/\/get/, (msg, match) => {
       });
 
     pool.connect();
+    const delay = () => new Promise(resolve => setTimeout(resolve, 500));
 
-    pool.query('SELECT * FROM public.posts WHERE is_posted IS false ORDER BY id DESC', (err, res) => {
+    pool.query('SELECT * FROM public.posts WHERE is_posted IS false ORDER BY id DESC', async (err, res) => {
         const posts = res['rows'];
         for (let i = 0; i < posts.length; i++) {
             console.log(posts[i]['title']);
             let message = `<b>${posts[i]['title']}</b>\n\n${posts[i]['link']}`
             bot.sendMessage(chatId, message, {'parse_mode':'HTML'});
+            await delay();
+
         }
         pool.end();
     });
