@@ -1,7 +1,7 @@
 # itshmeluritybot
 ![](img/shmel.png)
 This is **IT-Shmelurity** Telegram Bot for post automation<br /> 
-[![Telegram Badge](https://img.shields.io/badge/-shmelovod-0088CC?style=flat&logo=Telegram&logoColor=white)][telegram]
+![Telegram Badge](https://img.shields.io/badge/-shmelovod-0088CC?style=flat&logo=Telegram&logoColor=white)
 
 ## Install app
 
